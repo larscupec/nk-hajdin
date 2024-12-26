@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "left main right"
+    "footer footer footer";
+  grid-template-columns: 12% 76% 12%;
+  grid-template-rows: auto auto auto;
+  background-color: whitesmoke;
+  row-gap: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+header {
+  grid-area: header;
+  background-image: url("images/header_bg.webp");
+  display: grid;
+  grid-template-areas: "left main right";
+  grid-template-columns: 10% 80% 10%;
+  text-align: center;
+
+  * {
+    grid-area: main;
+  }
+}
+
+#header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+#crest {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#crest:hover {
+  text-decoration: none;
+}
+
+#navigation {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#featured {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 255), rgba(0, 0, 0, 0));
+  color: white;
+  align-items: center;
+  text-align: center;
+  height: 450px;
+}
+
+.featured-story {
+  display: grid;
+  grid-area: "content";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: end;
+  height: 100%;
+  background-size: cover;
+  color: white;
+
+  * {
+    grid-area: content;
+    position: relative;
+  }
+}
+
+.story-title {
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fade {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgb(36, 36, 36), rgba(0, 0, 0, 0.0) 50%);
+}
+
+#news {
+  display: grid;
+  grid-template-areas:
+    "story1 story2"
+    "story1 story3"
+    "story1 story4";
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  height: 500px;
+
+  .story:nth-child(1) {
+    grid-area: story1;
+    display: grid;
+    grid-template-areas: "content";
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    align-items: end;
+    color: white;
+    background-size: cover;
+    background-position: center;
+
+    * {
+      grid-area: content;
+      position: relative;
+    }
+  }
+
+  .story:nth-child(2) {
+    grid-area: story2;
+  }
+
+  .story:nth-child(3) {
+    grid-area: story3;
+  }
+
+  .story:nth-child(4) {
+    grid-area: story4;
+  }
+}
+
+.story {
+  display: grid;
+  grid-template-areas:
+    "thumbnail headline"
+    "thumbnail summary";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+  color: black;
+  gap: 20px;
+
+  h1 {
+    grid-area: headline;
+    font-size: 24px;
+  }
+}
+
+.story-summary {
+  grid-area: summary;
+  text-align: justify;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.story-thumbnail {
+  grid-area: thumbnail;
+  background-size: cover;
+  background-position: center;
+}
+
+#fixtures {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fixture {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.club {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  p {
+    text-align: center;
+  }
+}
+
+#socials {
+  display: grid;
+  grid-template-areas:
+    "youtube facebook instagram twitter tiktok";
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  height: 140px;
+}
+
+.social-link {
+  color: white;
+  display: grid;
+  grid-template-areas: "content";
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  background: linear-gradient(to top, rgba(18, 48, 184, 0.884), rgba(255, 255, 255, 0.0));
+
+  * {
+    grid-area: content;
+    position: relative;
+  }
+
+  article {
+    padding: 15px;
+    align-self: flex-end;
+  }
+}
+
+.social-link:hover {
+  text-decoration: none;
+  background: linear-gradient(to top, rgba(0, 0, 255, 0.799), rgba(255, 255, 255, 0.0));
+}
+
+#youtube-link {
+  div {
+    background-image: url(https://www.vecernji.hr/media/img/69/e2/6304c1bf186a4226a02d.jpeg);
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+#facebook-link {
+  div {
+    background-image: url(https://www.vecernji.hr/media/img/eb/83/3161432d36d8e956931e.jpeg);
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+#instagram-link {
+  div {
+    background-image: url(https://www.valpovstina.info/images/Bizovac5/hajdin.jpg);
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+#twitter-link {
+  div {
+    background-image: url(https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=opMG5mCxhKQdiEsjq4my-w&cb_client=search.gws-prod.gps&w=408&h=240&yaw=154.82977&pitch=0&thumbfov=100);
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+#tiktok-link {
+  div {
+    background-image: url(https://www.valpovstina.info/images/rekreacija-sport/NK_Hajdin_Cret-V.jpg);
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+#sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 120px;
+  }
+}
+
+footer {
+  margin: 50px 0 30px 0;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: rgb(135, 135, 135);
+
+  div {
+    display: flex;
+    gap: 15px;
+  }
+
+  a {
+    font-weight: bold;
+    color: rgb(135, 135, 135);
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  i {
+    user-select: none;
+    color: black;
+  }
+}
