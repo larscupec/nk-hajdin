@@ -1,0 +1,28 @@
+.story {
+  display: grid;
+  grid-template-areas:
+    "thumbnail headline"
+    "thumbnail summary";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+  color: black;
+  gap: 20px;
+
+  h1 {
+    grid-area: headline;
+    font-size: 24px;
+  }
+}
+
+.story-summary {
+  grid-area: summary;
+  text-align: justify;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.story-thumbnail {
+  grid-area: thumbnail;
+  background-size: cover;
+  background-position: center;
+}

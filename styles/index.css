@@ -1,81 +1,7 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "left main right"
-    "footer footer footer";
-  grid-template-columns: 12% 76% 12%;
-  grid-template-rows: auto auto auto;
-  background-color: whitesmoke;
-  row-gap: 30px;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .section-heading {
   margin-bottom: 30px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgb(205, 205, 205);
-}
-
-header {
-  grid-area: header;
-  background-image: url("images/header_bg.webp");
-  display: grid;
-  grid-template-areas: "left main right";
-  grid-template-columns: 10% 80% 10%;
-  text-align: center;
-
-  * {
-    grid-area: main;
-  }
-}
-
-#header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  gap: 20px;
-}
-
-#crest {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-#crest:hover {
-  text-decoration: none;
-}
-
-#navigation {
-  display: flex;
-  gap: 20px;
-  font-weight: bold;
-
-  a:hover {
-    text-decoration: underline;
-  }
-}
-
-main {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
 }
 
 #featured {
@@ -159,35 +85,6 @@ main {
   }
 }
 
-.story {
-  display: grid;
-  grid-template-areas:
-    "thumbnail headline"
-    "thumbnail summary";
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 3fr;
-  color: black;
-  gap: 20px;
-
-  h1 {
-    grid-area: headline;
-    font-size: 24px;
-  }
-}
-
-.story-summary {
-  grid-area: summary;
-  text-align: justify;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.story-thumbnail {
-  grid-area: thumbnail;
-  background-size: cover;
-  background-position: center;
-}
-
 #fixtures {
   display: flex;
   justify-content: space-around;
@@ -197,6 +94,8 @@ main {
   display: flex;
   align-items: center;
   gap: 20px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px black;
 }
 
 .club {
@@ -296,34 +195,5 @@ main {
 
   img {
     max-width: 120px;
-  }
-}
-
-footer {
-  margin: 50px 0 30px 0;
-  grid-area: footer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  color: rgb(135, 135, 135);
-
-  div {
-    display: flex;
-    gap: 15px;
-  }
-
-  a {
-    font-weight: bold;
-    color: rgb(135, 135, 135);
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-
-  i {
-    user-select: none;
-    color: black;
   }
 }
