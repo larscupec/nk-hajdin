@@ -1,0 +1,22 @@
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+#privacy-policy {
+  grid-column: 1;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+h2 {
+  font-size: 20px;
+}
