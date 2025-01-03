@@ -1,0 +1,56 @@
+#photos {
+  grid-column: 1;
+  display: grid;
+  grid-template-areas: 
+    "large1 large1 tall1 small1"
+    "large1 large1 tall1 tall2"
+    "wide1 wide1 wide1 tall2"
+    "small2 tall3 large2 large2"
+    "small3 tall3 large2 large2";
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  height: 1300px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.large1 {
+  grid-area: large1;
+}
+
+.large2 {
+  grid-area: large2;
+}
+
+.tall1 {
+  grid-area: tall1;
+}
+
+.tall3 {
+  grid-area: tall3;
+}
+
+.tall2 {
+  grid-area: tall2;
+}
+
+.wide1 {
+  grid-area: wide1;
+}
+
+.small1 {
+  grid-area: small1;
+}
+
+.small2 {
+  grid-area: small2;
+}
+
+.small3 {
+  grid-area: small3;
+}
