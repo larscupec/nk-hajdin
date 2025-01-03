@@ -1,0 +1,31 @@
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+#fixtures {
+
+  table {
+    font-size: large;
+    text-align: left;
+    border:1px solid black;
+    width: 100%;
+  }
+
+  td, th {
+    padding: 5px;
+  }
+}
+
+.win {
+  background-color: rgb(0, 191, 0);
+}
+
+.draw {
+  background-color: rgb(202, 202, 0);
+}
+
+.win, .draw {
+  color: white;
+}
