@@ -9,4 +9,6 @@ main {
   flex-direction: column;
   gap: 30px;
   text-align: justify;
+  box-shadow: 0 0 4px 2px rgb(0 0 0 / 20%);
+  padding: 10px;
 }

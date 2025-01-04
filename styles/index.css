@@ -6,6 +6,8 @@
   align-items: center;
   text-align: center;
   height: 450px;
+  box-shadow: 0 0 4px 2px rgb(0 0 0 / 20%);
+  padding: 10px;
 }
 
 .featured-story {
@@ -48,6 +50,8 @@
   grid-template-rows: repeat(3, minmax(0, 1fr));
   gap: 20px;
   height: 500px;
+  box-shadow: 0 0 4px 2px rgb(0 0 0 / 20%);
+  padding: 10px;
 
   .story:nth-child(1) {
     grid-area: story1;
@@ -82,14 +86,15 @@
 #fixtures {
   display: flex;
   justify-content: space-around;
+  
 }
 
 .fixture {
   display: flex;
   align-items: center;
   gap: 20px;
+  box-shadow: 0 0 2px 1px rgb(0 0 0 / 20%);
   padding: 10px;
-  box-shadow: 5px 5px 5px black;
 }
 
 .club {
@@ -136,52 +141,14 @@
   background: linear-gradient(to top, rgba(0, 0, 255, 0.799), rgba(255, 255, 255, 0.0));
 }
 
-#youtube-link {
-  div {
-    background-image: url(https://www.vecernji.hr/media/img/69/e2/6304c1bf186a4226a02d.jpeg);
-    background-size: cover;
-    z-index: -1;
-  }
-}
-
-#facebook-link {
-  div {
-    background-image: url(https://www.vecernji.hr/media/img/eb/83/3161432d36d8e956931e.jpeg);
-    background-size: cover;
-    z-index: -1;
-  }
-}
-
-#instagram-link {
-  div {
-    background-image: url(https://www.valpovstina.info/images/Bizovac5/hajdin.jpg);
-    background-size: cover;
-    z-index: -1;
-  }
-}
-
-#twitter-link {
-  div {
-    background-image: url(https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=opMG5mCxhKQdiEsjq4my-w&cb_client=search.gws-prod.gps&w=408&h=240&yaw=154.82977&pitch=0&thumbfov=100);
-    background-size: cover;
-    z-index: -1;
-  }
-}
-
-#tiktok-link {
-  div {
-    background-image: url(https://www.valpovstina.info/images/rekreacija-sport/NK_Hajdin_Cret-V.jpg);
-    background-size: cover;
-    z-index: -1;
-  }
-}
-
 #sponsors {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 4px 2px rgb(0 0 0 / 20%);
+  padding: 10px;
 
   a:hover {
     text-decoration: none;
