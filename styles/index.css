@@ -1,3 +1,9 @@
+main > section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 #featured {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;

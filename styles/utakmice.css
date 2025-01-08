@@ -5,11 +5,12 @@ main {
 }
 
 #fixtures {
+  box-shadow: 0 0 4px 2px rgb(0 0 0 / 20%);
+  padding: 10px;
 
   table {
     font-size: large;
     text-align: left;
-    border:1px solid black;
     width: 100%;
   }
 
