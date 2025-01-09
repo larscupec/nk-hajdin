@@ -21,6 +21,12 @@
   overflow: hidden;
 }
 
+@media only screen and (max-width: 600px) {
+  .story-summary {
+    display: none;
+  }
+}
+
 .story-thumbnail {
   grid-area: thumbnail;
   background-size: cover;
