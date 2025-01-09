@@ -9,10 +9,19 @@ body {
     "header header header"
     "left main right"
     "footer footer footer";
-  grid-template-columns: 12% 76% 12%;
+  grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: auto auto auto;
   background-color: whitesmoke;
-  row-gap: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+  }
 }
 
 a {
@@ -51,6 +60,16 @@ header {
   gap: 10px;
 }
 
+@media only screen and (max-width: 1000px) {
+  #splash {
+    display: none;
+  }
+
+  #crest > h1 {
+    display: none;
+  }
+}
+
 #crest:hover {
   text-decoration: none;
 }
@@ -70,6 +89,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 30px;
 }
 
 footer {

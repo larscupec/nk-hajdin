@@ -16,6 +16,16 @@ main > section {
   padding: 10px;
 }
 
+@media only screen and (max-width: 1000px) {
+  #featured {
+    grid-template-columns: 1fr;
+  }
+
+  #ft-prev-btn, #ft-next-btn {
+    display: none;
+  }
+}
+
 .featured-story {
   display: grid;
   grid-area: "content";
@@ -87,12 +97,27 @@ main > section {
   .story:nth-child(4) {
     grid-area: story4;
   }
+
+  @media only screen and (max-width: 1300px) {
+    .story:first-child {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  #news {
+    grid-template-areas:
+      "story2"
+      "story3"
+      "story4";
+    grid-template-columns: 1fr;
+  }
 }
 
 #fixtures {
   display: flex;
   justify-content: space-around;
-  
 }
 
 .fixture {
@@ -101,6 +126,18 @@ main > section {
   gap: 20px;
   box-shadow: 0 0 2px 1px rgb(0 0 0 / 20%);
   padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .fixture:last-child {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .fixture:nth-last-child(-n + 2) {
+    display: none;
+  }
 }
 
 .club {
@@ -120,7 +157,19 @@ main > section {
     "youtube facebook instagram twitter tiktok";
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  height: 140px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #socials {
+    grid-template-areas:
+      "youtube"
+      "facebook"
+      "instagram"
+      "twitter"
+      "tiktok";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+  }
 }
 
 .social-link {
@@ -129,7 +178,7 @@ main > section {
   grid-template-areas: "content";
   grid-template-columns: 100%;
   grid-template-rows: 100%;
-  background: linear-gradient(to top, rgba(18, 48, 184, 0.884), rgba(255, 255, 255, 0.0));
+  background: linear-gradient(to top, rgba(18, 48, 184, 0.884) 20%, rgba(255, 255, 255, 0.0));
 
   * {
     grid-area: content;
