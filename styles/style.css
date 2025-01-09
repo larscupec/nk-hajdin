@@ -60,7 +60,7 @@ header {
   gap: 10px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
   #splash {
     display: none;
   }
@@ -74,13 +74,27 @@ header {
   text-decoration: none;
 }
 
-#navigation {
+#nav-desktop {
   display: flex;
   gap: 20px;
   font-weight: bold;
 
   a:hover {
     text-decoration: underline;
+  }
+}
+
+#nav-mob {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  #nav-desktop {
+    display: none;
+  }
+
+  #nav-mob {
+    display: block;
   }
 }
 
@@ -100,6 +114,7 @@ footer {
   align-items: center;
   gap: 20px;
   color: rgb(135, 135, 135);
+  text-align: center;
 
   div {
     display: flex;

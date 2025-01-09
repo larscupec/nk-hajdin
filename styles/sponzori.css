@@ -14,3 +14,9 @@
     height: 100px;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  #logos img {
+    height: 50px;
+  }
+}
