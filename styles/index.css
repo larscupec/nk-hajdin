@@ -140,6 +140,12 @@ main > section {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .fixture:nth-last-child(-n + 3) {
+    display: none;
+  }
+}
+
 .club {
   display: flex;
   flex-direction: column;
